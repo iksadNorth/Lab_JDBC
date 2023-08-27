@@ -13,7 +13,7 @@ import java.util.Optional;
 @SpringBootTest @Transactional
 class MemberRepositoryImplTest {
     @Autowired
-    private MemberRepository repository;
+    private MemberRepositoryImpl repository;
 
     @BeforeEach
     void printStartLine() {
