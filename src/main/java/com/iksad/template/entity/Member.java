@@ -1,18 +1,19 @@
 package com.iksad.template.entity;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 @ToString
+@Entity @Table(name = "member")
 @Getter @Setter @NoArgsConstructor
 public class Member {
-    public static final String TABLE = "member";
-
-    public static final String COL_ID = "id";
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
-    public static final String COL_NAME = "name";
+    @Column(name = "name")
     private String name;
 }
