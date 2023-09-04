@@ -10,5 +10,5 @@ public interface MemberRepository {
     Member save(Member entity);
     Optional<Member> findById(Long id);
     List<Member> findAll();
-    void deleteById(Long id);
+    void deleteById(Long id) throws IllegalArgumentException;
 }
